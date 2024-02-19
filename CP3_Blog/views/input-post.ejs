@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+
+<section id="input-post mb-0"> <!--SECTION INPUT POST-->
+  <div class="img-container mb-0">
+    <!--HERE IS BACKGROND IMAGE-->
+    </div>
+    <h2 class="text-center mb-0">Add new post</h2>
+  <div class="bg-input-post-container">
+    
+      <div class="input-post-container-item">
+
+        <form id="input-post" action="/add_post" method="POST">
+          
+          <label for="text">Autor<span class="asteriks">*</span>:</label>
+          <input type="text" name="author" required>
+
+          <label for="textarea">Quote<span class="asteriks">*</span>:</label>
+          <textarea  class="quote" id="quote" name="quote" rows="5" required></textarea>
+          
+          <label for="text">Tags<span class="asteriks">*</span>:</label>
+          <input type="text" name="tags" required>
+
+          <label for="text">Posted by<span class="asteriks">*</span>:</label>
+          <input type="text" name="postedBy" required>
+
+          <button id="btn-submit" class="btn" type="submit">Submit</button>
+        </form>
+       
+      </div>
+    
+  </div>
+
+    </section>  <!--END OF SECTION RECENT-POSTS-->
+   
+</section> <!--END OF SECTION INPUT POST-->
+
+<%- include("partials/footer.ejs") %>

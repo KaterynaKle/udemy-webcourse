@@ -1,0 +1,51 @@
+<%- include("partials/header.ejs") %>
+
+<% if (postedQuote.length >= 1){ %>
+
+<!--SECTION RECENT-POSTS-->
+<section id="recent-posts">
+  <div class="img-container mb-0">
+  <!--HERE IS BACKGROND IMAGE-->
+  </div>
+    <h2 class="text-center">Recent posts</h2>
+   <div class="grid-container text-center mt-2 mb-5">
+    
+
+
+      <% for (let i = postedQuote.length - 1; i >= 0; i--) { %>
+
+        <div class="row">
+          <div class="grid-item">
+            <!--HERE IS IMAGE-->
+            <img class="grid-item-img" src="./images/bee_icon.png" height="200" alt="bee-icon">
+         </div>
+         <div class="grid-item">
+          
+            <div><%= postedQuote[i].authorName %></div>
+            <div id="quote-text">"<%= postedQuote[i].citation %>"</div>
+            <div>Tags: <%= postedQuote[i].tagWords %></div>
+            <div>Posted by: <%= postedQuote[i].postedName %></div>
+
+         </div> 
+         <!--Post editing / deleting-->
+         <div id="frm-btn" class="grid-item"> 
+          
+          <form  action="/edit" method="POST">
+            <button id="btn-edit" class="btn" value="<%= i %>" name="edit_post">Edit</button>
+            </form>
+            <form  action="/delete" method="POST">
+            <button id="btn-delete" class="btn" value="<%= i %>" name="delete_post">Delete</button>
+            </form>
+          </div>      
+        </div>
+        
+  <% } %>
+
+
+ 
+  </section>
+  <% } else {%>
+    <%- include("partials/begin.ejs") %>
+<% } %>
+  
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,43 @@
+<%- include("partials/header.ejs") %>
+
+<% if (postedQuote.length >= 1){ %>
+      <!--SECTION RECENT-POSTS-->
+<section id="recent-posts">
+  <div class="img-container mb-0">
+  <!--HERE IS BACKGROND IMAGE-->
+  </div>
+    <h2 class="text-center">Welcome to BeeHive - Collection of quotes!</h2>
+   <div class="grid-container text-center mt-2 mb-5">
+
+      <% for (let i = postedQuote.length - 1; i >= 0;  i--) { %>
+
+        <div class="row">
+          <div class="grid-item">
+            <!--HERE IS IMAGE-->
+            <img class="grid-item-img" src="./images/bee_icon.png" height="200" alt="bee-icon">
+         </div>
+         <div class="grid-item">
+          
+            <div><%= postedQuote[i].authorName %></div>
+            <div id="quote-text">"<%= postedQuote[i].citation %>"</div>
+            <div>Tags: <%= postedQuote[i].tagWords %></div>
+            <div>Posted by: <%= postedQuote[i].postedName %></div>
+         </div>    
+        </div>
+        
+  <% } %>
+
+  
+</div>
+
+  </section>  <!--END OF SECTION RECENT-POSTS-->
+ 
+  <% } else { %>
+   
+    <%- include("partials/begin.ejs") %>
+ 
+  <% } %>
+
+    </section> <!--END OF SECTION TITLE-->
+  
+<%- include("partials/footer.ejs") %>
