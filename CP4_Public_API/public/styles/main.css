@@ -1,0 +1,126 @@
+html {
+    overflow: hidden;
+}
+html, body {
+    height: 100%;
+}
+body {   
+   background-image: url("../images/magnolia_book.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+.cover {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    overflow: hidden;
+    height: 100vh;
+    max-width: 42em;
+    margin: 0 auto;
+}
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.nav-link > a , div.logo > a{
+    text-decoration: none;
+}
+
+a.active {
+    text-decoration: none;
+    background-color: rgba(255, 127, 80, 0.5);
+    border-radius: 20px;
+}
+
+.nav-link > a:hover {
+    background-color: rgba(255, 127, 80, 0.2);
+    border-radius: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+div.logo {
+    flex-basis: 70%;
+}
+#logo-img {
+    margin-top: 0.8rem;
+    float: left;
+    margin-right: 10px;
+}
+div.nav-link{
+    display: flex;
+    gap: 50px;
+}
+.riddle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    
+}
+.item-riddle {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 2rem;
+    font-weight: bold;
+}
+
+.action-btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   font-size: 1rem;
+}
+#answerArea {
+    margin-top: 1rem;
+    color: rgb(97,221,120);
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.gradient__text {
+    background: #121FCF;
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* For small devices only */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+    #logo-img {
+        height: 40px;
+    }
+    nav {
+        gap: 10px;
+        padding-right: 1rem;
+    }
+    .riddle-container {
+        padding: 0.5rem;
+    }
+    .item-riddle {
+        padding: 1rem;
+       
+    }
+   p.scroll {
+    height: 100px;
+    overflow: auto;
+   }
+
+}

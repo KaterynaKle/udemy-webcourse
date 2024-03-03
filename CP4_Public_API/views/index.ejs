@@ -1,0 +1,34 @@
+<%- include("partials/header.ejs") %>
+        <div class="main-container">
+            <div>     
+        <div class="riddle-container">
+            <div class="item-riddle">
+             <p class="scroll"><%= riddle %></p>
+                <div class="action-btn">
+                    <button id="btn-answer" class="btn">Answer</button>
+             <form action="/next" method="get">
+                <button id="btn-next" class="btn">Next riddle</button>
+             </form>
+                </div>
+             <div id="answerArea"></div>
+            </div>
+        </div>
+            </div>  
+        </div>
+ <%- include("partials/footer.ejs") %>
+</div>
+<script>
+
+document.getElementById("btn-answer").addEventListener("click", showAnswer);
+
+function showAnswer() {
+
+    const content = "<%= answer %>";
+    document.getElementById("answerArea").innerHTML = content;
+    document.getElementById("btn-answer").hidden = true;
+
+}
+</script>
+<script src="/js/main.js"></script>
+</body>
+</html>
