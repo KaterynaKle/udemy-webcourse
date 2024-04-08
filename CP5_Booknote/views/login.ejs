@@ -1,0 +1,16 @@
+<%- include("partials/main_header.ejs") %>
+
+<div class="main-container">
+    <div class="item-main-container">
+        <form class="account-frm" action="/login" method="post" hidden="false">
+            <span style="color: #5CE1E6;">Log In</span>
+            <label for="username">User name</label>
+            <input type="text" name="username" id="username" autocomplete="off" placeholder="<%= locals.username %>"/>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" autocomplete="off" placeholder="<%= locals.password %>" required/>
+            <div class="register-link">Not registered? <a href="/register">Register now</a></div>
+            <button class="btn" type="submit">Log In</button>
+            </form>
+</div> 
+</div>
+<%- include("partials/footer.ejs") %>

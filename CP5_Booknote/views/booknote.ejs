@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+    <div id="main-container" class="main-container">
+        <div class="item-main-container">
+        <div id="title"><%= booknote[0].title %></div>
+        <div id="img-bookcover"><img src="data:image/jpg;base64,<%= booknote[0].cover %>" alt="bookcover" height="100"></div>
+        <div id="author">by <%= booknote[0].author %></div>
+        <div id="date">Posted on <%= booknote[0].post_date %></div>
+        <div id="rating">Rating <span style="color: #5CE1E6;"><%= booknote[0].rating %></span>/10</div>
+        <div id="note"><%= booknote[0].booknote %></div>
+        <form class="action-frm" action="/edit/booknote/<%= booknote[0].id %>" method="get">
+          <button id="edit-btn" type="submit" name="edit" value="<%= booknote[0].id %>">Edit</button>
+         <!-- <button type="submit" name="delete" value="<%= booknote[0] %>">Delete</button>-->
+        </form>
+        <form class="action-frm" action="/delete/booknote/<%= booknote[0].id %>" method="post">
+          <button id="delete-btn" type="submit" name="delete" value="<%= booknote[0].id %>">Delete</button>
+        </form>  
+    </div> 
+</div>
+    <%- include("partials/footer.ejs") %>
+
+  
+    

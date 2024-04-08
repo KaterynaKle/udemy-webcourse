@@ -1,0 +1,34 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="note-container">
+        <div class="note-item-container">
+        <form class="note-frm" action="/add" method="post">
+            <button class="btn" type="submit">Add note</button>
+            <input type="text" id="newtitle" name="title" autocomplete="off" placeholder="Title, e.g. Selfish gene">
+            <input type="text" id="newauthor" name="author" autocomplete="off" placeholder="Author, e.g. Richard Dawkins">
+              <div id="newisbn-newrating">
+                <div><input type="text" id="newisbn" name="isbn" autocomplete="off" placeholder="Enter ISBN 10 or ISBN 13"></div>
+                <div><label style="font-size: smaller;" for="newrating">Rating:</label>
+                  <select name="rating" id="newrating">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                  </select>          </div>
+              </div>
+            
+            <textarea name="notes" id="newnotes" cols="30" rows="50"></textarea>
+        </form>
+           </div> 
+</div>
+    <%- include("partials/footer.ejs") %>
+
+  
+    

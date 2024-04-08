@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+    <div class="note-container">
+        <div class="note-item-container">
+          <% if (locals.booknote.length > 0) { %>
+             <form class="note-frm" action="/update/booknote/<%= booknote[0].id %>" method="post">
+            <button class="btn" type="submit">Update</button>
+            <label style="font-size: smaller;" for="edtitle">Title:</label>
+            <input type="text" id="edtitle" name="title" autocomplete="off" value="<%= booknote[0].title %>">
+            <label style="font-size: smaller;" for="edauthor">Author:</label>
+            <input type="text" id="edauthor" name="author" autocomplete="off" value="<%= booknote[0].author %>">
+            <label style="font-size: smaller;" for="edisbn">ISBN:</label>
+            <input type="text" id="edisbn" name="isbn" autocomplete="off" value="<%= booknote[0].isbn %>">
+            <label style="font-size: smaller;" for="edrating">Rating</label>
+            <input type="text" id="edrating" name="rating" autocomplete="off" value="<%= booknote[0].rating %>">
+            <label style="font-size: smaller;" for="ednotes">Notes:</label>
+            <textarea name="notes" id="ednotes" cols="30" rows="40"><%= booknote[0].booknote %></textarea>
+        </form>
+
+         <% } %>
+       
+    </div> 
+</div>
+    <%- include("partials/footer.ejs") %>
+
+  
+    

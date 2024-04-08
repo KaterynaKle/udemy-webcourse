@@ -1,0 +1,17 @@
+<%- include("partials/main_header.ejs") %>
+
+<div class="main-container">
+    <div class="item-main-container">
+<form class="account-frm" action="/signup" method="post">
+                <span style="color: #5CE1E6;">Sign Up</span>
+                <label for="username">Choose a user name</label>
+                <input type="text" name="username" id="username" autocomplete="off" required/>
+                <label for="password">Choose a password</label>
+                <input type="password" name="password" id="password" autocomplete="off" placeholder="<%= locals.psw %>"required/>
+                <label for="psw_repeat">Confirm password</label>
+                <input type="password" name="psw_repeat" id="psw-repeat" autocomplete="off" placeholder="<%= locals.psw %>" required/>
+                <button class="btn" type="submit">Sign Up</button>
+                </form>
+</div> 
+</div>
+<%- include("partials/footer.ejs") %>

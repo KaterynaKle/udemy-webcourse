@@ -1,0 +1,169 @@
+@font-face {
+  font-family: brittany;
+  src: url("/fonts/BrittanySignature.ttf");
+}
+@font-face {
+  font-family: bodoniStd;
+  src: url("/fonts/BodoniStd.otf");
+}
+html {
+  overflow: hidden;
+}
+html, body {
+  height: 100%;
+}
+body {
+background-color: #0B141F;
+}
+.bg-color {
+   display: grid;
+    grid-template-rows: auto 2fr auto;
+    max-width: 50em;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: rgba(196,205,230,.08);
+}
+.header-container {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 10px;
+} 
+
+.logo > a {
+  font-family: brittany;
+  font-size: 1.5rem;
+  color: crimson;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.nav-links > a {
+  margin-left: 20px;
+  font-family: bodoniStd;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+#menu-img {
+  margin-left: 20px;
+}
+.nav-links {
+ justify-content: flex-end;
+ padding: 0.7rem;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-main-container {
+  font-family: bodoniStd;
+  font-size: 1.4rem;
+  color: white;
+  background-color: rgba(92,225,230,.1);
+  border-radius: 10px;
+  padding: 2rem;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container {
+  display: flex;
+  color: white;
+  gap: 10px;
+}
+.item-footer {
+  font-family: brittany;
+  font-size: 1.5rem;
+  color: crimson;
+}
+#footer-logo > a {
+  margin-left: 0;
+}
+.sidenav {
+  justify-self: end;
+}
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #1f3641;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  .title-nav {
+    font-family: brittany;
+    font-size: 1.5rem;
+    color: crimson;
+    padding-left: 32px;
+  }
+  
+#welcome-text > a:nth-child(4), #welcome-text > a:nth-child(5), form > div > a {
+  color: #5CE1E6;
+}
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: bodoniStd;
+    color: #5CE1E6;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+
+  .account-frm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vh;
+    font-size: smaller;
+  }
+  .btn {
+    width: 80px;
+    /*margin: 0 auto;*/
+  }
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-width: 450px) {
+    /* Header */
+    .logo-img { height: 50px; }
+     div.logo > a, .title-nav 
+     {
+      font-size: 1.1rem; 
+    }
+    .nav-link-item { display: none; }
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    /* Main container */
+    #welcome-text { 
+      font-size: 1rem; 
+    }
+    .item-main-container { 
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+  }

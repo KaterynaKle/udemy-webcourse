@@ -1,0 +1,109 @@
+html {
+  overflow: auto;
+}
+html, body {
+  height: auto;
+}
+.bg-color {
+  height: auto;
+}
+.note-item-container {
+  font-family: bodoniStd;
+  font-size: 1.4rem;
+  color: white;
+  background-color: rgba(92,225,230,.1);
+  border-radius: 10px;
+  padding: 2rem;
+}
+.note-frm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#isbn-rating {
+  display: flex;
+  gap: 10px;
+}
+.action-frm {
+  display: inline;
+}
+#edit-btn, #delete-btn, .del-btn {
+  margin-top: 1rem;
+}
+#username {
+  text-decoration: none;
+  color: #5CE1E6;
+  font-family: brittany;
+}
+ #sortBy {
+  font-size: large;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#img-bookcover {
+  float: right;
+}
+#no-booknotes {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+#title {
+  font-size: 1.2rem;
+  color: crimson;
+}
+
+#author {
+  font-size: 1rem;
+  color: #5CE1E6;
+  padding-bottom: 1rem;
+}
+/*#isbn {
+  font-size: 0.9rem;
+}
+#date, #rating {
+font-size: 0.9rem;
+font-style: italic;
+}
+#note {
+  font-size: 1.1rem;
+}*/
+#note, #newnotes, #ednotes { font-family: bodoniStd; font-size: 1.1rem; } 
+
+#booknote-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #5CE1E6;
+}
+#warning-message {
+  margin-top: 1rem;
+  color: yellow;
+}
+
+/*For small devices only*/
+@media screen and (max-width: 450px) {
+  /*Header*/
+div.logo > a, #username, .title-nav {
+font-size: 1.1rem;
+}
+.logo-img { height: 50px; }
+/*Main Container*/
+#sortBy { padding-top: 1rem; padding-bottom: 1rem; }
+#sort { font-size: 0.95rem; }
+#sort1, #sort3 { height: 15px; }
+#sort2 { height: 10px; }
+#note-container, #booknote-link  {
+  font-size: 1rem;
+}
+#img-bookcover { height: 80px; }
+#author { font-size: 0.85rem; }
+
+}
+.item-main-container { 
+  font-size: 1rem;
+}
+#note, #newnotes, #ednotes { font-size: 1rem; }
+#note {
+  margin-top: 1rem;
+}

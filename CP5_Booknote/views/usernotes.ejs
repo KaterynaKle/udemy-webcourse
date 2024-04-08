@@ -1,0 +1,63 @@
+<%- include("partials/header.ejs") %>
+
+    <div id="main-container" class="main-container">
+        <div class="item-main-container">
+  <% if (locals.message) { %>
+          <div id="warning-message"><%= locals.userName %>, <%= locals.message %>
+          <br>
+            <form action="/delete/user/<%= locals.userID %>" method="post">
+          <button class="del-btn" type="submit">Delete</button>
+          </form>
+          </div> <br><hr>
+        <% } %> 
+        <form action="/create" method="get">
+            <button type="submit">New note</button>
+        </form>
+        <% if (locals.booknote.length > 0) { %>
+          <div id="sortBy">
+            <form action="/sort" method="post">
+              <span id="sort">Sort by </span>
+              <button type="submit" name="rating" value="rating">rating</button>
+              <img id="sort1" src="/images/sort-up.png" alt="sort" height="20">
+              <button type="submit" name="title" value="title">title</button>
+              <img id="sort2" src="/images/sort_alph-up.png" alt="sort" height="15">
+              <button type="submit" name="date" value="date">date</button>
+              <img id="sort3" src="/images/sort_date-up.png" alt="sort" height="20">
+            </form>
+           </div> 
+          <% for (let i = 0; i < booknote.length; i++) { %>
+            <div id="note-container">
+          <div id="title"><%= booknote[i].title %></div>
+          <div id="img-bookcover"><img src="data:image/jpg;base64,<%= booknote[i].cover %>" alt="bookcover" height="100"></div>
+          <div id="author">by <%= booknote[i].author %></div>
+          <div id="isbn">ISBN: <%= booknote[i].isbn %></div>
+          <div id="date">Posted on <%= booknote[i].post_date.toDateString().slice(3,15) %></div>
+          <div id="rating">Rating <span style="color: #5CE1E6;"><%= booknote[i].rating %></span>/10</div>
+          <div id="note" style="height: 45px; overflow: hidden;"><%= booknote[i].booknote %></div>
+          <div><a id="booknote-link" href="/booknote/<%= booknote[i].id %>">Read all notes</a></div>
+            </div>
+          
+              
+          
+          <form class="action-frm" action="/edit/booknote/<%= booknote[i].id %>" method="get">
+            <button id="edit-btn" type="submit" name="edit" value="<%= booknote[i].id %>">Edit</button>
+          </form>
+            <form class="action-frm" action="/delete/booknote/<%= booknote[i].id %>" method="post">
+            <button id="delete-btn" type="submit" name="delete" value="<%= booknote[i].id %>">Delete</button>
+          </form>
+          <hr>
+          <% } %>   
+          
+         <% } else { %>
+          <div id="no-booknotes"><span style="color: #5CE1E6;"><%= locals.userName %></span>, you don't have any booknotes yet. To add a new note,
+              please click the "New Note" button at the top.</div>
+         <% } %>
+          
+        
+       
+    </div> 
+</div>
+    <%- include("partials/footer.ejs") %>
+
+  
+    
